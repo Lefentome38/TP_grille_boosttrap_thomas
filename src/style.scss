@@ -1,23 +1,51 @@
-// *{
-//   border: solid 1px;
-// }
+@use "scss/mixin" as *;
+@use "scss/variables" as *;
+
+*{
+  border: solid 1px;
+}
+
+.container{
+  margin: 5%;
+}
+
+.row{
+  display: flex;
+}
 
 body{
   background-color: rgb(212, 208, 208);
 }
 
-.blue {
-  background-color: blue;
-}
-
 .red{
-  background-color: red;
+  width: 70%;
+  background-color: $color-red;
 }
 
 .orange{
-  background-color: orange;
+  background-color: $color-orange;
 }
 
-.purpul{
-  background-color: purple;
+.purple{
+  background-color: $color-purple;
+}
+
+.blue {
+  width: 33.33333%;
+  background-color: $color-blue;
+}
+
+.col-sm-3 { //red A.2
+  width: 30%;
+}
+
+.col-sm-6{//orange et purple-row
+  flex-direction: column;
+  width: 50%;
+}
+
+@media screen and (max-width: 768px) {
+  .blue{
+    background-color: red;
+  }
 }
